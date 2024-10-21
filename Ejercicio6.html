@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="funtion.js"></script>
+
+    <title>Ejercicio 6</title>
+</head>
+<body>
+    <!--Crea una función para calcular potencias de un modo recursivo.-->
+    <h1>Calculadora de Potencias</h1>
+    <label for="base">Base:</label>
+    <input type="text" id="base" placeholder="Ingresa la base"><br><br>
+
+    <label for="exponente">Exponente:</label>
+    <input type="text" id="exponente" placeholder="Ingresa el exponente"><br><br>
+
+    <button onclick="calcularPotencia()">Calcular Potencia</button>
+
+    <h2 id="resultado"></h2>
+    <script>
+         function potencia(base, exponente) {
+            //base:cualquier número elevado a la potencia de 0 es 1
+            if (exponente === 0) {
+                return 1;
+            }
+            //recursivo:multiplicar la base por la potencia de la base y el exponente menos uno
+            return base * potencia(base, exponente - 1);
+        }
+
+        function calcularPotencia() {
+            //obtener los valores de los campos de entrada
+            let base = parseFloat(document.getElementById("base").value);
+            let exponente = parseInt(document.getElementById("exponente").value);
+
+            //validar que la base y el exponente sean números
+            if (isNaN(base) || isNaN(exponente)) {
+                alert("Por favor, ingresa valores numéricos válidos.");
+                return;
+            }
+
+            //calcular la potencia
+            let resultado = potencia(base, exponente);
+            //mostrar el resultado en el elemento HTML
+            document.getElementById("resultado").innerText = `El resultado de ${base} elevado a ${exponente} es: ${resultado}`;
+        }
+    </script>
+</body>
+</html>
