@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -23,4 +24,31 @@ console.log(`El número mayor es: ${numeroMayor}`);
 
 </script>
 </body>
+=======
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!--Define una función máximo que dados 4 valores devuelva el máximo de ellos.
+Llámala con un ejemplo pidiendo los 4 valores al usuario.-->
+<script>
+    let num1 = prompt("dime un numero");
+    let num2 = prompt("dime un numero");
+    let num3 = prompt("dime un numero");
+    let num4 = prompt("dime un numero");
+function compararCuatro(a,b,c,d) {
+    // Usamos Math.max para encontrar el número más grande entre los cuatro
+    return Math.max(a, b, c, d);
+}
+// Ejemplo de uso
+const numeroMayor = compararCuatro(parseInt(num1),parseInt(num2),parseInt(num3),parseInt(num4),);
+console.log(`El número mayor es: ${numeroMayor}`);
+
+</script>
+</body>
+>>>>>>> ffd5d3b7a4d131f6eb2de5c6ee2388a84155f61c
 </html>

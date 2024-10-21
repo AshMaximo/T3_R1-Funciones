@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -38,3 +39,44 @@
     </script>
   </body>
 </html>
+=======
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ejercicio 5</title>
+  </head>
+  <body>
+    <!--Mejora el ejercicio anterior permitiendo calcular también el área de un circulo.-->
+    <h1>Calcular Volumen de Esfera y Área de Círculo</h1>
+    <label for="radio">Ingresa el radio:</label>
+    <input type="number" id="radio" step="0.01" required />
+    <button onclick="calcularVolumenYArea()">Calcular</button>
+
+    <h2 id="resultado"></h2>
+    <script>
+      function calcularVolumenYArea() {
+        // Obtener el valor del radio
+        const radio = parseFloat(document.getElementById("radio").value);
+        const pi = Math.PI; // Valor de π
+
+        // Cálculo del volumen de la esfera
+        const volumen = (4 / 3) * pi * Math.pow(radio, 3);
+        // Cálculo del área del círculo
+        const area = pi * Math.pow(radio, 2);
+
+        // Mostrar los resultados en el elemento con id 'resultado'
+        document.getElementById(
+          "resultado"
+             //${radio} se utiliza para insertar el valor de la variable radio en una cadena de texto
+            //${volumen.toFixed(...)} es para mostrar números que requieren precisión decimal.
+            //innerText es una propiedad para trabajar con el texto visible y permite tanto obtener el texto actual como establecer uno nuevo
+        ).innerText = `El volumen de la esfera con radio ${radio} es: ${volumen.toFixed(
+          2
+        )}\nEl área del círculo con radio ${radio} es: ${area.toFixed(2)}`;
+      }
+    </script>
+  </body>
+</html>
+>>>>>>> ffd5d3b7a4d131f6eb2de5c6ee2388a84155f61c
